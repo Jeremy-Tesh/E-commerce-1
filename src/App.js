@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header/Header';
+const Data = [
+    {
+        name: 'henok',
+        id: 1
+    },
+    {
+        name: 'alex',
+        id: 2
+    },
+    {
+        name: 'nati',
+        id: 3
+    },
+    {
+        name: 'selam',
+        id: 4
+    }
+];
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div>
+            {Data.map((name) => {
+                return (
+                    <div key={name.id}>
+                        <p onClick={() => console.log(name.id)}>{name.name}</p>
+                    </div>
+                );
+            })}
+        </div>
+    );
 }
 
 export default App;
