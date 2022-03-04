@@ -6,6 +6,8 @@ function App() {
         <div>
             <Header />
             <Shop />
+
+            <h1>hello woelrc</h1>
         </div>
     );
 }
