@@ -10,6 +10,7 @@ export const Container = styled.div`
     top: 0;
     position: sticky;
     transition: all 1s ease;
+    z-index: 3;
 `;
 export const Navs = styled.p`
     display: flex;
