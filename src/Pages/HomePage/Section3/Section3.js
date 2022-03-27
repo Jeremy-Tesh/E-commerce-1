@@ -33,14 +33,14 @@ const cards = [
         type: 'Scandals Cool',
         now: '$337.00',
         was: '$449.00'
-    },
-    {
-        image: product5,
-        catagory: 'Boots,Shoes,Women',
-        type: 'Scandals Cool',
-        now: '$337.00',
-        was: '$449.00'
     }
+    // {
+    //     image: product5,
+    //     catagory: 'Boots,Shoes,Women',
+    //     type: 'Scandals Cool',
+    //     now: '$337.00',
+    //     was: '$449.00'
+    // }
 ];
 
 function Section3() {

@@ -10,16 +10,19 @@ flex-direction:column;
 `;
 export const CardContainer = styled.div`
     display: flex;
-    height: 70vh;
+    height: 80vh;
     border: 2px, red;
     justify-content: center;
+    border: solid red;
 `;
 export const Card = styled.div`
     background: url(${(props) => props.bg});
+    background-size: fill;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: space-between;
-    width: 15%;
-    height: 70%;
+    width: 280px;
+    height: 80%;
     margin: 10px;
 `;
 export const Stock = styled.div`
