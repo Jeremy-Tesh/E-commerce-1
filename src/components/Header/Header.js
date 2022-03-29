@@ -7,6 +7,7 @@ import {
 } from '@mui/icons-material';
 import { Badge, TextField, Typography } from '@mui/material';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Container, NavContainer, Navs, Logo, SearchContainer } from './style';
 function Header() {
     return (
@@ -19,7 +20,8 @@ function Header() {
                     Home <ArrowDropDown />
                 </Navs>
                 <Navs>
-                    Shop
+                    <Link to="/shoppage"> Shop</Link>
+
                     <ArrowDropDown />
                 </Navs>
                 <Navs>
