@@ -66,7 +66,15 @@ function Header() {
                 />
                 <Favorite />
                 <Badge badgeContent={4} color="primary">
-                    <ShoppingCart />
+                    <Link
+                        style={{
+                            textDecoration: 'none',
+                            color: 'white'
+                        }}
+                        to="cart"
+                    >
+                        <ShoppingCart />
+                    </Link>
                 </Badge>
             </SearchContainer>
         </Container>
