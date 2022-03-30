@@ -1,7 +1,32 @@
+import { Typography } from '@mui/material';
 import React from 'react';
-
+import {
+    TopContainer,
+    Container,
+    TitleContainer,
+    LeftContainer,
+    RightContainer,
+    Price,
+    Quantity,
+    Total
+} from './style';
 function Cart() {
-    return <div>Cart</div>;
+    return (
+        <Container>
+            <TopContainer>
+                <Typography variant="h4">Shopping Cart</Typography>
+                <Typography color="brown" variant="h6"></Typography>
+            </TopContainer>
+            <TitleContainer>
+                <LeftContainer>LeftContainer</LeftContainer>
+                <RightContainer>
+                    <Price>Price</Price>
+                    <Quantity>Quantity</Quantity>
+                    <Total>Total</Total>
+                </RightContainer>
+            </TitleContainer>
+        </Container>
+    );
 }
 
 export default Cart;
