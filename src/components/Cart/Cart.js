@@ -8,7 +8,8 @@ import {
     RightContainer,
     Price,
     Quantity,
-    Total
+    Total,
+    CheckOutConainer
 } from './style';
 function Cart() {
     return (
@@ -25,6 +26,7 @@ function Cart() {
                     <Total>Total</Total>
                 </RightContainer>
             </TitleContainer>
+            <CheckOutConainer>CheckOutConainer</CheckOutConainer>
         </Container>
     );
 }

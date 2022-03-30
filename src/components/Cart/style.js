@@ -30,3 +30,4 @@ export const Quantity = styled.div`
     border: 1px solid black;
 `;
 export const Total = styled.div``;
+export const CheckOutConainer = styled.div``;
