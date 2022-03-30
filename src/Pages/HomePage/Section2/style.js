@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import banner1 from '../../../Assets/Images/banner-1.jpg';
-import banner2 from '../../../Assets/Images/banner-2.jpg';
+// import banner2 from '../../../Assets/Images/banner-2.jpg';
 
 export const Container = styled.div`
     display: flex;

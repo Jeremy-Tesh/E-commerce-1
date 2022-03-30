@@ -4,7 +4,7 @@ import product1 from '../../../Assets/Images/product1.jpg';
 import product2 from '../../../Assets/Images/product2.jpg';
 import product3 from '../../../Assets/Images/product3.jpg';
 import product4 from '../../../Assets/Images/product4.jpg';
-import product5 from '../../../Assets/Images/product5.jpg';
+// import product5 from '../../../Assets/Images/product5.jpg';
 const cards = [
     {
         image: product1,

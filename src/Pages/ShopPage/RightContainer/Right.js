@@ -1,9 +1,8 @@
 import { ShoppingCart, Star } from '@mui/icons-material';
-import { Button, Typography } from '@mui/material';
+import { Button } from '@mui/material';
 import React from 'react';
 import {
     Container,
-    Content,
     ParentContainer,
     FirstDiv,
     SecondDiv,

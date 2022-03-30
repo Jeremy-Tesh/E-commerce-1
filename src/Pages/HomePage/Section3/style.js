@@ -1,12 +1,10 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-width:100%,
-height:70vh,
-display:flex;
-flex-direction:column;
-
-
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
 `;
 export const CardContainer = styled.div`
     display: flex;

@@ -1,10 +1,4 @@
-import {
-    ArrowDownward,
-    ArrowDropDown,
-    Favorite,
-    LinkedCameraSharp,
-    ShoppingCart
-} from '@mui/icons-material';
+import { ArrowDropDown, Favorite, ShoppingCart } from '@mui/icons-material';
 import { Badge, TextField, Typography } from '@mui/material';
 import React from 'react';
 import { Link } from 'react-router-dom';
