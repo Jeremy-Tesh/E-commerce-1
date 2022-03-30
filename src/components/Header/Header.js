@@ -13,14 +13,32 @@ function Header() {
     return (
         <Container>
             <Logo>
-                <Typography variant="h3">Molla</Typography>
+                <Link
+                    style={{
+                        textDecoration: 'none',
+                        color: 'white'
+                    }}
+                    to="/"
+                >
+                    <Typography variant="h3">Molla</Typography>
+                </Link>
             </Logo>
+
             <NavContainer>
                 <Navs>
                     Home <ArrowDropDown />
                 </Navs>
                 <Navs>
-                    <Link to="/shoppage"> Shop</Link>
+                    <Link
+                        style={{
+                            textDecoration: 'none',
+                            color: 'white'
+                        }}
+                        to="/shoppage"
+                    >
+                        {' '}
+                        Shop
+                    </Link>
 
                     <ArrowDropDown />
                 </Navs>
