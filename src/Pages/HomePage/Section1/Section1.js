@@ -18,7 +18,7 @@ function Section1() {
                     style={{ color: 'white', textAlign: 'center' }}
                 >
                     <h3>Don't Miss</h3>
-                    <h1>Mystery Deals</h1>
+                    <h1>Mystery Deals!!!!</h1>
                     <h3>Online Only</h3>
                     {/* <button>Discover Now</button> */}
                 </div>
