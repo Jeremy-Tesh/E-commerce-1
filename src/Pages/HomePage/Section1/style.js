@@ -3,6 +3,7 @@ import img from '../../../Assets/Images/slide-1.jpg';
 
 export const Container = styled.div`
     background-image: url(${img});
+    background-repeat: no-repeat;
     height: 90vh;
 
     display: flex;
