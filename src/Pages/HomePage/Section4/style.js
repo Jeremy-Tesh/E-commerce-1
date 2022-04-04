@@ -9,7 +9,7 @@ export const Container = styled.div`
 
     width: 100%;
     height: 500px;
-    border: solid 2px;
+
     display: flex;
 `;
 export const Content = styled.div`
