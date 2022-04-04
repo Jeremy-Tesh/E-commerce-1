@@ -22,8 +22,7 @@ import {
     FirstRow,
     SecondRow,
     CartTitle,
-    ThirdRow,
-    CartButton
+    ThirdRow
 } from './style';
 let Data = [
     {
