@@ -1,5 +1,6 @@
 import { ArrowCircleRightSharp } from '@mui/icons-material';
-import { Typography } from '@mui/material';
+import { Button, TextField, Typography } from '@mui/material';
+import { Link } from 'react-router-dom';
 import React from 'react';
 import {
     TopContainer,
@@ -17,8 +18,26 @@ import {
     ProductImg,
     SubTitle,
     InputField,
-    ArrowButton
+    ArrowButton,
+    FirstRow,
+    SecondRow,
+    CartTitle,
+    ThirdRow
 } from './style';
+let Data = [
+    {
+        name: 'freeShipping',
+        price: '$0'
+    },
+    {
+        name: 'Standard',
+        price: '$10'
+    },
+    {
+        name: 'Express',
+        price: '$20'
+    }
+];
 function Cart() {
     return (
         <Container>
@@ -66,12 +85,46 @@ function Cart() {
                         </Quantity>
                         <Total>
                             <Title>Total</Title>
-
-                            <SubTitle>$220</SubTitle>
+                            <SubTitle>$3000</SubTitle>
                         </Total>
                     </RightContainer>
                 </TitleContainer>
-                <CheckOut />
+                <CheckOut>
+                    <CartTitle>Cart Total</CartTitle>
+                    <FirstRow>
+                        <Typography>Sub Total</Typography>
+                        <Typography>$385.00</Typography>
+                    </FirstRow>
+                    {Data.map((data) => (
+                        <SecondRow>
+                            <div
+                                style={{
+                                    display: 'flex',
+                                    alignItems: 'center'
+                                }}
+                            >
+                                <input type="radio" />
+                                <p>{data.name}</p>
+                            </div>
+                            <p>{data.price}</p>
+                        </SecondRow>
+                    ))}
+                    <Typography>Estimate for your contry</Typography>
+                    <TextField placeholder="Change Address" />
+                    <ThirdRow>
+                        <Typography>Total</Typography>
+                        <Typography>$405.00</Typography>
+                    </ThirdRow>
+
+                    <Button>
+                        <Link to="/checkout">Procced to CheckOut </Link>
+                    </Button>
+
+                    <Button>
+                        <Link to="/"> Continue Shopping</Link>
+                    </Button>
+                </CheckOut>
+                {/* <CartButton color={'red'}>hello</CartButton> */}
             </Wrapper>
         </Container>
     );

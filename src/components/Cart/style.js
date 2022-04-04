@@ -49,9 +49,14 @@ export const Wrapper = styled.div`
 export const CheckOut = styled.div`
     height: 70%;
     width: 70%;
-    border: 1px solid black;
+    border: 1px dashed rgba(0, 0, 0.6);
+    padding: 10px 10px;
     border-radius: 10px;
     align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-item: center;
 `;
 export const Title = styled(Typography)`
     border-bottom: 1px solid black;
@@ -80,3 +85,26 @@ export const InputField = styled(TextField)`
     outline: none;
 `;
 export const ArrowButton = styled(Button)``;
+export const FirstRow = styled.div`
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+`;
+export const SecondRow = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-item: center;
+`;
+export const ThirdRow = styled.div`
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px;
+`;
+export const CartTitle = styled(Typography)`
+    border-bottom: 1px solid black;
+    padding: 20px 20px;
+    font-size: 50px;
+`;
+export const CartButton = styled(Button)`
+    background-color: ${(props) => props.color};
+`;
