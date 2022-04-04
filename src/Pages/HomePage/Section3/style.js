@@ -11,7 +11,6 @@ export const CardContainer = styled.div`
     height: 80vh;
     border: 2px, red;
     justify-content: center;
-    border: solid red;
 `;
 export const Card = styled.div`
     background: url(${(props) => props.bg});
@@ -20,6 +19,7 @@ export const Card = styled.div`
     display: flex;
     justify-content: space-between;
     width: 280px;
+    flex-wrap: 'wrap';
     height: 80%;
     margin: 10px;
 `;
