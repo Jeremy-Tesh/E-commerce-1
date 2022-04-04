@@ -1,3 +1,4 @@
+import { Typography } from '@mui/material';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -12,10 +13,12 @@ export const Container = styled.div`
     transition: all 1s ease;
     z-index: 3;
 `;
-export const Navs = styled.p`
+export const Navs = styled(Typography)`
     display: flex;
     align-items: center;
+    font-weight: 200;
     cursor: pointer;
+    padding: 10px 10px;
     transition: all 1s ease;
     &:hover {
         text-decoration: underline;
@@ -24,7 +27,6 @@ export const Navs = styled.p`
 export const NavContainer = styled.div`
     display: flex;
     flex: 1.5;
-    justify-content: space-between;
     align-items: center;
 `;
 export const Logo = styled.div`
