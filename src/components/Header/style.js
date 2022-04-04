@@ -40,5 +40,4 @@ export const SearchContainer = styled.div`
     color: white;
     justify-content: space-around;
     align-items: center;
-s
 `;
