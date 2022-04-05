@@ -1,3 +1,4 @@
+import { Button, Typography } from '@mui/material';
 import React from 'react';
 import Image2 from '../../../Assets/Images/2.png';
 import Image3 from '../../../Assets/Images/2.png';
@@ -13,11 +14,44 @@ function Section1() {
     return (
         <>
             <Container className="flex flex-col justify-center items-center text-white -mt-20 ">
-                <div className="text-center">
-                    <h1 className="text-lg">Don't Miss</h1>
-                    <h1 className="text-6xl m-4">Mystery Deals</h1>
-                    <h3 className="text-lg">Online Only</h3>
-                    {/* <button>Discover Now</button> */}
+                <div
+                    className="motto-text"
+                    style={{ color: 'white', textAlign: 'center' }}
+                >
+                    <Typography
+                        fontFamily="fantasy
+                    "
+                        fontWeight="100"
+                        variant="h5"
+                    >
+                        Don't Miss
+                    </Typography>
+                    <Typography
+                        style={{
+                            fontFamily: 'flaming-regular',
+                            fontSize: '100px'
+                        }}
+                    >
+                        Mystery Deals
+                    </Typography>
+                    <Typography
+                        variant="h5"
+                        fontFamily="fantasy"
+                        fontWeight="100"
+                    >
+                        Online Only
+                    </Typography>
+                    <Button
+                        style={{
+                            padding: '10px 30px',
+                            margin: '20px 0px',
+                            borderRadius: '30px'
+                        }}
+                        color="inherit"
+                        variant="outlined"
+                    >
+                        Discover Now
+                    </Button>
                 </div>
             </Container>
             <div className="flex justify-center overflow-auto hover:overflow-scroll">

@@ -8,7 +8,7 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import CheckOut from './components/CheckOut/Checkout';
 
 import './App.css';
-import Login from './Pages/LoginPage/login';
+// import Login from './Pages/LoginPage/login';
 
 function App() {
     let history = useLocation();
