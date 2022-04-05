@@ -8,7 +8,9 @@ export const Container = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50%;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
     width: 100%;
 `;
