@@ -13,7 +13,9 @@ const BrandLogos = [Image2, Image3, Image4, Image5, Image6, Image7];
 function Section1() {
     return (
         <>
-            <Container>
+
+            <Container className="flex flex-col justify-center items-center text-white -mt-20 ">
+
                 <div
                     className="motto-text"
                     style={{ color: 'white', textAlign: 'center' }}

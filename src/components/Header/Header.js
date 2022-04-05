@@ -1,9 +1,10 @@
 import { ArrowDropDown, Favorite, ShoppingCart } from '@mui/icons-material';
-import { Badge, TextField, Typography } from '@mui/material';
+import { Badge, TextField } from '@mui/material';
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { NavContainer, Navs, Logo, SearchContainer, LogoImg } from './style';
+import { NavContainer, Navs, Logo, SearchContainer } from './style';
+import logo from '../../Assets/Icons/logo.png';
 function Header() {
     const [navBar, setNavColor] = useState(false);
 
@@ -35,8 +36,8 @@ function Header() {
         <div
             className={
                 navBar
-                    ? 'h-20 z-10 top-0 sticky transition-all items-center border-solid flex align-middle bg-gray-700 text-white'
-                    : 'h-20 z-10 top-0 sticky transition-all  items-center border-solid flex align-middle bg-transparent text-white'
+                    ? 'h-20 z-10 top-0 sticky transition-all items-center border-solid flex align-middle bg-gray-700 text-white px-10'
+                    : 'h-20 z-10 top-0 sticky transition-all  items-center border-solid flex align-middle bg-transparent text-white px-10'
             }
         >
             <Logo>
@@ -47,7 +48,11 @@ function Header() {
                     }}
                     to="/"
                 >
-                    <LogoImg />
+                    <img
+                        className="w-[104px] h-[26px] my-5"
+                        src={logo}
+                        alt=""
+                    />
                 </Link>
             </Logo>
 
@@ -84,12 +89,12 @@ function Header() {
             </NavContainer>
             <SearchContainer>
                 <TextField
+                    style={{
+                        color: 'red',
+                        borderBottom: '1px solid white'
+                    }}
                     label="Search"
                     variant="standard"
-                    InputLabelProps={{
-                        style: { color: '#fff' }
-                    }}
-                    className="text-white"
                 />
                 <Favorite />
                 <Badge badgeContent={4} color="primary">
