@@ -1,3 +1,4 @@
+import { Button, Typography } from '@mui/material';
 import React from 'react';
 import Image2 from '../../../Assets/Images/2.png';
 import Image3 from '../../../Assets/Images/2.png';
@@ -17,10 +18,36 @@ function Section1() {
                     className="motto-text"
                     style={{ color: 'white', textAlign: 'center' }}
                 >
-                    <h3>Don't Miss</h3>
-                    <h1>Mystery Deals!!!!</h1>
-                    <h3>Online Only</h3>
-                    {/* <button>Discover Now</button> */}
+                    <Typography
+                        fontFamily="fantasy
+                    "
+                        fontWeight="100"
+                        variant="h5"
+                    >
+                        Don't Miss
+                    </Typography>
+                    <Typography
+                        style={{
+                            fontFamily: 'flaming-regular',
+                            fontSize: '100px'
+                        }}
+                    >
+                        Mystery Deals
+                    </Typography>
+                    <Typography variant="h5" fontFamily="fantasy">
+                        Online Only
+                    </Typography>
+                    <Button
+                        style={{
+                            padding: '10px 30px',
+                            margin: '20px 0px',
+                            borderRadius: '30px'
+                        }}
+                        color="inherit"
+                        variant="outlined"
+                    >
+                        Discover Now
+                    </Button>
                 </div>
             </Container>
             <BrandLogo>

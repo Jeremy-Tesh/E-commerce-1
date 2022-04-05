@@ -72,12 +72,12 @@ function Header() {
             </NavContainer>
             <SearchContainer>
                 <TextField
-                    style={{
-                        color: 'red',
-                        borderBottom: '1px solid white'
-                    }}
                     label="Search"
                     variant="standard"
+                    InputLabelProps={{
+                        style: { color: '#fff' }
+                    }}
+                    className="text-white"
                 />
                 <Favorite />
                 <Badge badgeContent={4} color="primary">
