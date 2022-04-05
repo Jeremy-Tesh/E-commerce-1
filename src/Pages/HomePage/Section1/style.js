@@ -2,18 +2,17 @@ import styled from 'styled-components';
 import img from '../../../Assets/Images/slide-1.jpg';
 
 export const Container = styled.div`
-    /* background-image: url(${img}); */
-    background-repeat: no-repeat;
-    height: 90vh;
+    top: -70px;
 
-    display: flex;
-    flex: 1;
-    justify-content: center; /* align horizontal */
-    align-items: center;
+    background-image: url(${img});
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+
+    height: 100vh;
+    width: 100%;
 `;
 
 export const BrandLogo = styled.div`
     display: flex;
-    width: 100%;
-    justify-content: space-evenly;
 `;

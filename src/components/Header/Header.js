@@ -1,19 +1,39 @@
 import { ArrowDropDown, Favorite, ShoppingCart } from '@mui/icons-material';
 import { Badge, TextField, Typography } from '@mui/material';
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { NavContainer, Navs, Logo, SearchContainer } from './style';
 function Header() {
-    const [navBar, setNavBar] = useState(false);
+    const [navBar, setNavColor] = useState(false);
 
-    const changeBackground = () => {
-        if (window.scrollY >= 80) {
-            setNavBar(true);
-        } else {
-            setNavBar(false);
-        }
+    function usePageViews() {
+        let location = useLocation();
+
+        useEffect(() => {
+            console.log(location);
+
+            if (location.pathname === '/') {
+                window.addEventListener('scroll', changeColor);
+                changeColor();
+            } else setNavColor(true);
+            return () => {
+                window.removeEventListener('scroll', changeColor);
+            };
+        }, [location]);
+    }
+
+    const changeColor = () => {
+        if (window.scrollY >= 70) {
+            setNavColor(true);
+        } else setNavColor(false);
     };
-    window.addEventListener('scroll', changeBackground);
+
+    // useEffect(() => {
+    //     return window.removeEventListener('scroll', changeColor);
+    // }, []);
+    usePageViews();
+
     return (
         <div
             className={

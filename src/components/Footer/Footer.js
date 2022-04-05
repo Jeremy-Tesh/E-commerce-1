@@ -26,20 +26,20 @@ function Footer() {
             </Wrapper>
             <Wrapper>
                 <Typography variant="h5"> Information</Typography>
-                {Info.map((info) => (
-                    <Typography>{info}</Typography>
+                {Info.map((info, id) => (
+                    <Typography key={id}>{info}</Typography>
                 ))}
             </Wrapper>
             <Wrapper>
                 <Typography variant="h5">Customer Service</Typography>
-                {Service.map((service) => (
-                    <Typography>{service}</Typography>
+                {Service.map((service, id) => (
+                    <Typography key={id}>{service}</Typography>
                 ))}
             </Wrapper>
             <Wrapper>
                 <Typography variant="h5">My Account</Typography>
-                {Account.map((acc) => (
-                    <Typography>{acc}</Typography>
+                {Account.map((acc, id) => (
+                    <Typography key={id}>{acc}</Typography>
                 ))}
             </Wrapper>
         </Container>

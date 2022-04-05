@@ -12,32 +12,32 @@ const BrandLogos = [Image2, Image3, Image4, Image5, Image6, Image7];
 function Section1() {
     return (
         <>
-            <Container>
-                <div
-                    className="motto-text"
-                    style={{ color: 'white', textAlign: 'center' }}
-                >
-                    <h3>Don't Miss</h3>
-                    <h1>Mystery Deals!!!!</h1>
-                    <h3>Online Only</h3>
+            <Container className="flex flex-col justify-center items-center text-white -mt-20 ">
+                <div className="text-center">
+                    <h1 className="text-lg">Don't Miss</h1>
+                    <h1 className="text-6xl m-4">Mystery Deals</h1>
+                    <h3 className="text-lg">Online Only</h3>
                     {/* <button>Discover Now</button> */}
                 </div>
             </Container>
-            <BrandLogo>
-                {BrandLogos.map((logo) => (
+            <div className="flex justify-center overflow-auto hover:overflow-scroll">
+                {BrandLogos.map((logo, id) => (
                     <div
-                        className="brand-images-row"
+                        className="brand-images-row "
+                        key={id}
                         style={{
                             display: 'flex',
                             justifyContent: 'center',
                             alignItems: 'center',
-                            height: '100px'
+                            minWidth: '271px',
+                            height: '99px',
+                            border: 'solid grey 1px'
                         }}
                     >
                         <img src={logo} alt="image1" />
                     </div>
                 ))}
-            </BrandLogo>
+            </div>
         </>
     );
 }

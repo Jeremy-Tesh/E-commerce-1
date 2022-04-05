@@ -3,10 +3,9 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     height: 70px;
-    border: 1px solid black;
+
     display: flex;
     align-items: center;
-    background-color: #333;
     color: white;
     top: 0;
     position: sticky;
