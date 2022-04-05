@@ -1,98 +1,168 @@
-import { Link } from 'react-router-dom';
-import { Button, TextField, Typography } from '@mui/material';
 import React from 'react';
-import { CartTitle } from '../Cart/style';
-import {
-    Container,
-    TopContainer,
-    Coupon,
-    Form,
-    CheckOutCard,
-    Wrapper
-} from './style';
+import PropTypes from 'prop-types';
+import withStyles from '@material-ui/core/styles/withStyles';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import AppBar from '@material-ui/core/AppBar';
+import Paper from '@material-ui/core/Paper';
+import Stepper from '@material-ui/core/Stepper';
+import Step from '@material-ui/core/Step';
+import StepLabel from '@material-ui/core/StepLabel';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
+import AddressForm from './AddressForm';
+import PaymentForm from './Paymentform';
+import Review from './Review';
 
-function CheckOut() {
-    return (
-        <Container>
-            <TopContainer>
-                <Typography variant="h3">CheckOut</Typography>
-                <Typography color="coral">Shop</Typography>
-            </TopContainer>
-            <Coupon
-                placeholder="Have a coupon? Click here to enter your code
-"
-            />
-            <Wrapper>
-                <Form>
-                    <div className="flex">
-                        <TextField fullWidth placeholder="name" />
-                        <TextField fullWidth placeholder="lastname" />
-                    </div>
-                    <TextField placeholder="companyname" />
-                    <TextField placeholder="Country" />
-                    <TextField placeholder="Street/Adress" />
-                    <div className="flex">
-                        <TextField fullWidth placeholder="name" />
-                        <TextField fullWidth placeholder="lastname" />
-                    </div>
-                    <div className="flex">
-                        <TextField fullWidth placeholder="name" />
-                        <TextField fullWidth placeholder="lastname" />
-                    </div>
-                </Form>
-                <CheckOutCard>
-                    <CartTitle>Your Order</CartTitle>
-                    <div className="flex justify-between py-2 ">
-                        <Typography>Product</Typography>
-                        <Typography>Total</Typography>
-                    </div>
-                    <div
-                        style={{
-                            display: 'flex',
-                            justifyContent: 'space-between',
-                            padding: '10px 10px'
-                        }}
-                    >
-                        <Typography>black Shoe</Typography>
-                        <Typography>$300</Typography>
-                    </div>
-                    <div
-                        style={{
-                            display: 'flex',
-                            justifyContent: 'space-between',
-                            padding: '20px 20px'
-                        }}
-                    >
-                        <Typography>Sub-Total</Typography>
-                        <Typography>$300</Typography>
-                    </div>
-                    <div
-                        style={{
-                            display: 'flex',
-                            justifyContent: 'space-between',
-                            padding: '20px 20px'
-                        }}
-                    >
-                        <Typography>Sipping</Typography>
-                        <Typography>Free</Typography>
-                    </div>
-                    <div
-                        style={{
-                            display: 'flex',
-                            justifyContent: 'space-between',
-                            padding: '20px 20px'
-                        }}
-                    >
-                        <Typography>Total</Typography>
-                        <Typography>$300</Typography>
-                    </div>
-                    <Button>Place Order</Button>
-                    <Button>
-                        <Link to="/cart"> Go Back to Cart</Link>
-                    </Button>
-                </CheckOutCard>
-            </Wrapper>
-        </Container>
-    );
+const styles = (theme) => ({
+    appBar: {
+        position: 'relative'
+    },
+    layout: {
+        width: 'auto',
+        marginLeft: theme.spacing.unit * 2,
+        marginRight: theme.spacing.unit * 2,
+        [theme.breakpoints.up(600 + theme.spacing.unit * 2 * 2)]: {
+            width: 600,
+            marginLeft: 'auto',
+            marginRight: 'auto'
+        }
+    },
+    paper: {
+        marginTop: theme.spacing.unit * 3,
+        marginBottom: theme.spacing.unit * 3,
+        padding: theme.spacing.unit * 2,
+        [theme.breakpoints.up(600 + theme.spacing.unit * 3 * 2)]: {
+            marginTop: theme.spacing.unit * 6,
+            marginBottom: theme.spacing.unit * 6,
+            padding: theme.spacing.unit * 3
+        }
+    },
+    stepper: {
+        padding: `${theme.spacing.unit * 3}px 0 ${theme.spacing.unit * 5}px`
+    },
+    buttons: {
+        display: 'flex',
+        justifyContent: 'flex-end'
+    },
+    button: {
+        marginTop: theme.spacing.unit * 3,
+        marginLeft: theme.spacing.unit
+    }
+});
+
+const steps = ['Shipping address', 'Payment details', 'Review your order'];
+
+function getStepContent(step) {
+    switch (step) {
+        case 0:
+            return <AddressForm />;
+        case 1:
+            return <PaymentForm />;
+        case 2:
+            return <Review />;
+        default:
+            throw new Error('Unknown step');
+    }
 }
-export default CheckOut;
+
+class Checkout extends React.Component {
+    state = {
+        activeStep: 0
+    };
+
+    handleNext = () => {
+        this.setState((state) => ({
+            activeStep: state.activeStep + 1
+        }));
+    };
+
+    handleBack = () => {
+        this.setState((state) => ({
+            activeStep: state.activeStep - 1
+        }));
+    };
+
+    handleReset = () => {
+        this.setState({
+            activeStep: 0
+        });
+    };
+
+    render() {
+        const { classes } = this.props;
+        const { activeStep } = this.state;
+        console.log(activeStep);
+        return (
+            <React.Fragment>
+                <CssBaseline />
+                <AppBar
+                    position="absolute"
+                    color="default"
+                    className={classes.appBar}
+                ></AppBar>
+                <main className={classes.layout}>
+                    <Paper className={classes.paper}>
+                        <Typography component="h1" variant="h4" align="center">
+                            Checkout
+                        </Typography>
+                        <Stepper
+                            activeStep={activeStep}
+                            className={classes.stepper}
+                        >
+                            {steps.map((label) => (
+                                <Step key={label}>
+                                    <StepLabel>{label}</StepLabel>
+                                </Step>
+                            ))}
+                        </Stepper>
+                        <React.Fragment>
+                            {activeStep === steps.length ? (
+                                <React.Fragment>
+                                    <Typography variant="h5" gutterBottom>
+                                        Thank you for your order.
+                                    </Typography>
+                                    <Typography variant="subtitle1">
+                                        Your order number is #2001539. We have
+                                        emailed your order confirmation, and
+                                        will send you an update when your order
+                                        has shipped.
+                                    </Typography>
+                                </React.Fragment>
+                            ) : (
+                                <React.Fragment>
+                                    {getStepContent(activeStep)}
+                                    <div className={classes.buttons}>
+                                        {activeStep !== 0 && (
+                                            <Button
+                                                onClick={this.handleBack}
+                                                className={classes.button}
+                                            >
+                                                Back
+                                            </Button>
+                                        )}
+                                        <Button
+                                            variant="contained"
+                                            color="primary"
+                                            onClick={this.handleNext}
+                                            className={classes.button}
+                                        >
+                                            {activeStep === steps.length - 1
+                                                ? 'Place order'
+                                                : 'Next'}
+                                        </Button>
+                                    </div>
+                                </React.Fragment>
+                            )}
+                        </React.Fragment>
+                    </Paper>
+                </main>
+            </React.Fragment>
+        );
+    }
+}
+
+Checkout.propTypes = {
+    classes: PropTypes.object.isRequired
+};
+
+export default withStyles(styles)(Checkout);

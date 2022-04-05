@@ -47,16 +47,18 @@ export const Wrapper = styled.div`
     grid-template-columns: 2fr 1fr;
 `;
 export const CheckOut = styled.div`
-    height: 70%;
+    height: 100%;
     width: 70%;
-    border: 1px dashed rgba(0, 0, 0.6);
+    border: 1px solid coral;
     padding: 10px 10px;
     border-radius: 10px;
     align-self: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-item: center;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 `;
 export const Title = styled(Typography)`
     border-bottom: 1px solid black;

@@ -4,12 +4,15 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import ShopPage from './Pages/ShopPage/Shop';
 import Cart from './components/Cart/Cart';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import CheckOut from './components/CheckOut/Checkout';
+
 import './App.css';
 function App() {
+    let history = useLocation();
+    console.log(history.pathname);
     return (
-        <div className="app-container">
+        <div className={history.pathname === '/' ? 'app-container' : 'app'}>
             <Header />
             <Routes>
                 <Route path="/" element={<Home />} />
