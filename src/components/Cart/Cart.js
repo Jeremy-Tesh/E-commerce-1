@@ -1,5 +1,5 @@
 import { ArrowCircleRightSharp } from '@mui/icons-material';
-import { Button, TextField, Typography } from '@mui/material';
+import { Button, Paper, TextField, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 import React from 'react';
 import {
@@ -19,14 +19,11 @@ import {
     SubTitle,
     InputField,
     ArrowButton,
-    FirstRow,
-    SecondRow,
-    CartTitle,
-    ThirdRow
+    CartTitle
 } from './style';
 let Data = [
     {
-        name: 'freeShipping',
+        name: 'FreeShipping',
         price: '$0'
     },
     {
@@ -89,41 +86,57 @@ function Cart() {
                         </Total>
                     </RightContainer>
                 </TitleContainer>
-                <CheckOut>
-                    <CartTitle>Cart Total</CartTitle>
-                    <FirstRow>
-                        <Typography>Sub Total</Typography>
-                        <Typography>$385.00</Typography>
-                    </FirstRow>
-                    {Data.map((data) => (
-                        <SecondRow>
+                <Paper>
+                    <CheckOut>
+                        <CartTitle>Cart Total</CartTitle>
+                        <div
+                            className="flex justify-between px-2 py-3
+                         "
+                        >
+                            <Typography>Sub Total</Typography>
+                            <Typography>$385.00</Typography>
+                        </div>
+                        {Data.map((data) => (
                             <div
-                                style={{
-                                    display: 'flex',
-                                    alignItems: 'center'
-                                }}
+                                className="flex justify-between px-2 py-3
+                            "
                             >
-                                <input type="radio" />
-                                <p>{data.name}</p>
+                                <div
+                                    className="flex  w-full items-center
+                               "
+                                >
+                                    <input
+                                        className="mx-3 cursor-pointer"
+                                        type="radio"
+                                    />
+                                    <p>{data.name}</p>
+                                </div>
+                                <p>{data.price}</p>
                             </div>
-                            <p>{data.price}</p>
-                        </SecondRow>
-                    ))}
-                    <Typography>Estimate for your contry</Typography>
-                    <TextField placeholder="Change Address" />
-                    <ThirdRow>
-                        <Typography>Total</Typography>
-                        <Typography>$405.00</Typography>
-                    </ThirdRow>
+                        ))}
+                        <Typography>Estimate for your contry</Typography>
+                        <TextField
+                            id="standard-basic"
+                            label="change adress"
+                            variant="standard"
+                        />
+                        <div
+                            className="flex justify-between px-2 py-3
+                         "
+                        >
+                            <Typography>Total</Typography>
+                            <Typography>$405.00</Typography>
+                        </div>
 
-                    <Button>
-                        <Link to="/checkout">Procced to CheckOut </Link>
-                    </Button>
+                        <Button>
+                            <Link to="/checkout">Procced to CheckOut </Link>
+                        </Button>
 
-                    <Button>
-                        <Link to="/"> Continue Shopping</Link>
-                    </Button>
-                </CheckOut>
+                        <Button>
+                            <Link to="/"> Continue Shopping</Link>
+                        </Button>
+                    </CheckOut>
+                </Paper>
                 {/* <CartButton color={'red'}>hello</CartButton> */}
             </Wrapper>
         </Container>
