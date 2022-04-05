@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { NavContainer, Navs, Logo, SearchContainer } from './style';
+import logo from '../../Assets/Icons/logo.png';
 function Header() {
     const [navBar, setNavColor] = useState(false);
 
@@ -29,15 +30,14 @@ function Header() {
         } else setNavColor(false);
     };
 
-    
     usePageViews();
 
     return (
         <div
             className={
                 navBar
-                    ? 'h-20 z-10 top-0 sticky transition-all items-center border-solid flex align-middle bg-gray-700 text-white'
-                    : 'h-20 z-10 top-0 sticky transition-all  items-center border-solid flex align-middle bg-transparent text-white'
+                    ? 'h-20 z-10 top-0 sticky transition-all items-center border-solid flex align-middle bg-gray-700 text-white mx-10'
+                    : 'h-20 z-10 top-0 sticky transition-all  items-center border-solid flex align-middle bg-transparent text-white mx-10'
             }
         >
             <Logo>
@@ -48,7 +48,11 @@ function Header() {
                     }}
                     to="/"
                 >
-                    <Typography variant="h3">Molla</Typography>
+                    <img
+                        className="w-[104px] h-[26px] my-5"
+                        src={logo}
+                        alt=""
+                    />
                 </Link>
             </Logo>
 

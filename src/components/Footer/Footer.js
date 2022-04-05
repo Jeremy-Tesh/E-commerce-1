@@ -1,6 +1,7 @@
 import { Typography } from '@mui/material';
 import React from 'react';
 import { Container, Wrapper } from './style';
+import Logo from '../../Assets/Icons/logo-footer.png';
 
 let Info = ['About Molla', 'How To Shop On Molla', 'Faq', 'ContactUs', 'Login'];
 let Service = [
@@ -16,7 +17,7 @@ function Footer() {
     return (
         <Container>
             <Wrapper>
-                <Typography variant="h3">Molla</Typography>
+                <img className="w-[104px] h-[26px] my-5" src={Logo} alt="" />
                 <Typography>
                     Praesent dapibus, neque id cursus ucibus, tortor neque
                     egestas augue, eu vulputate magna eros eu erat. Aliquam erat

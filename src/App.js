@@ -15,15 +15,15 @@ function App() {
     console.log(history.pathname);
     return (
         <div className={history.pathname === '/' ? 'app-container' : 'app'}>
-            {/* <Header />
+            <Header />
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/shoppage" element={<ShopPage />} />
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/checkout" element={<CheckOut />} />
             </Routes>
-            <Footer /> */}
-            <Login />
+            <Footer />
+            {/* <Login /> */}
         </div>
     );
 }
