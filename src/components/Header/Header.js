@@ -3,7 +3,7 @@ import { Badge, TextField, Typography } from '@mui/material';
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { NavContainer, Navs, Logo, SearchContainer } from './style';
+import { NavContainer, Navs, Logo, SearchContainer, LogoImg } from './style';
 function Header() {
     const [navBar, setNavColor] = useState(false);
 
@@ -29,7 +29,6 @@ function Header() {
         } else setNavColor(false);
     };
 
-    
     usePageViews();
 
     return (
@@ -48,7 +47,7 @@ function Header() {
                     }}
                     to="/"
                 >
-                    <Typography variant="h3">Molla</Typography>
+                    <LogoImg />
                 </Link>
             </Logo>
 
