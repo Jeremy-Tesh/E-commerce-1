@@ -1,11 +1,27 @@
 import { ArrowDropDown, Favorite, ShoppingCart } from '@mui/icons-material';
 import { Badge, TextField, Typography } from '@mui/material';
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Container, NavContainer, Navs, Logo, SearchContainer } from './style';
+import { NavContainer, Navs, Logo, SearchContainer } from './style';
 function Header() {
+    const [navBar, setNavBar] = useState(false);
+
+    const changeBackground = () => {
+        if (window.scrollY >= 80) {
+            setNavBar(true);
+        } else {
+            setNavBar(false);
+        }
+    };
+    window.addEventListener('scroll', changeBackground);
     return (
-        <Container>
+        <div
+            className={
+                navBar
+                    ? 'h-20 z-10 top-0 sticky transition-all items-center border-solid flex align-middle bg-gray-700 text-white'
+                    : 'h-20 z-10 top-0 sticky transition-all  items-center border-solid flex align-middle bg-transparent text-white'
+            }
+        >
             <Logo>
                 <Link
                     style={{
@@ -71,7 +87,7 @@ function Header() {
                     </Link>
                 </Badge>
             </SearchContainer>
-        </Container>
+        </div>
     );
 }
 
