@@ -5,7 +5,7 @@ import Image4 from '../../../Assets/Images/3.png';
 import Image5 from '../../../Assets/Images/4.png';
 import Image6 from '../../../Assets/Images/5.png';
 import Image7 from '../../../Assets/Images/6.png';
-import { Container, BrandLogo } from './style';
+import { Container } from './style';
 
 const brandLogos = [Image2, Image3, Image4, Image5, Image6, Image7];
 

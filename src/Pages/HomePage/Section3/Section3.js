@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, CardContainer, Card, Stock, Icons } from './style';
+import { Container } from './style';
 import product1 from '../../../Assets/Images/product1.jpg';
 import product2 from '../../../Assets/Images/product2.jpg';
 import product3 from '../../../Assets/Images/product3.jpg';
