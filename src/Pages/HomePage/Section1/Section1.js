@@ -34,7 +34,11 @@ function Section1() {
                     >
                         Mystery Deals
                     </Typography>
-                    <Typography variant="h5" fontFamily="fantasy">
+                    <Typography
+                        variant="h5"
+                        fontFamily="fantasy"
+                        fontWeight="100"
+                    >
                         Online Only
                     </Typography>
                     <Button

@@ -1,12 +1,14 @@
 import React from 'react';
-import { Container, CardContainer, Card, Stock, Icons } from './style';
+import { Container } from './style';
 import product1 from '../../../Assets/Images/product1.jpg';
 import product2 from '../../../Assets/Images/product2.jpg';
 import product3 from '../../../Assets/Images/product3.jpg';
 import product4 from '../../../Assets/Images/product4.jpg';
+import HomeCard from '../../../components/HomeCard/homeCard';
 // import product5 from '../../../Assets/Images/product5.jpg';
 export const cards = [
     {
+        id: 1,
         image: product1,
         catagory: 'Boots,Shoes,Women',
         type: 'Scandals Cool',
@@ -14,6 +16,7 @@ export const cards = [
         was: '$449.00'
     },
     {
+        id: 2,
         image: product2,
         catagory: 'Boots,Shoes,Women',
         type: 'Scandals Cool',
@@ -21,6 +24,7 @@ export const cards = [
         was: '$449.00'
     },
     {
+        id: 3,
         image: product3,
         catagory: 'Boots,Shoes,Women',
         type: 'Scandals Cool',
@@ -28,6 +32,7 @@ export const cards = [
         was: '$449.00'
     },
     {
+        id: 4,
         image: product4,
         catagory: 'Boots,Shoes,Women',
         type: 'Scandals Cool',
@@ -55,7 +60,7 @@ function Section3() {
                         alignItems: 'center'
                     }}
                 >
-                    <h1>Trendy Products</h1>
+                    <h1 className="text-3xl font-bold">Trendy Products</h1>
                     <ul style={{ display: 'flex' }}>
                         <li>ALL</li>
                         <li>WOMEN</li>
@@ -63,41 +68,11 @@ function Section3() {
                         <li>ACCESSORIES</li>
                     </ul>
                 </div>
-                <CardContainer>
-                    {cards.map((card) => (
-                        <Card bg={card.image}>
-                            <Stock>
-                                <div
-                                    style={{
-                                        backgroundColor: '#a6c76c',
-                                        color: 'white',
-                                        textAlign: 'center',
-                                        width: '50px',
-                                        height: '20px',
-                                        fontSize: '15px'
-                                    }}
-                                >
-                                    <p>New</p>
-                                </div>
-                                <div
-                                    style={{
-                                        backgroundColor: '#ef837b',
-                                        color: 'white',
-                                        textAlign: 'center',
-                                        width: '50px',
-                                        height: '20px',
-                                        fontSize: '15px'
-                                    }}
-                                >
-                                    <p>Sale</p>
-                                </div>
-                            </Stock>
-                            <Icons>
-                                <div>{/* <h1>fav</h1> */}</div>
-                            </Icons>
-                        </Card>
+                <div className="flex flex-wrap justify-center ">
+                    {cards.map((item) => (
+                        <HomeCard image={item.image} key={item.id} />
                     ))}
-                </CardContainer>
+                </div>
             </Container>
         </>
     );
