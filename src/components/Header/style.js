@@ -36,6 +36,7 @@ export const Logo = styled.div`
 export const SearchContainer = styled.div`
     display: flex;
     flex: 1;
+
     color: white;
     justify-content: space-around;
     align-items: center;
