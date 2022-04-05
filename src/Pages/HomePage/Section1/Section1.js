@@ -7,7 +7,7 @@ import Image6 from '../../../Assets/Images/5.png';
 import Image7 from '../../../Assets/Images/6.png';
 import { Container, BrandLogo } from './style';
 
-const BrandLogos = [Image2, Image3, Image4, Image5, Image6, Image7];
+const brandLogos = [Image2, Image3, Image4, Image5, Image6, Image7];
 
 function Section1() {
     return (
@@ -21,7 +21,7 @@ function Section1() {
                 </div>
             </Container>
             <div className="flex justify-center overflow-auto hover:overflow-scroll">
-                {BrandLogos.map((logo, id) => (
+                {brandLogos.map((logo, id) => (
                     <div
                         className="brand-images-row "
                         key={id}
