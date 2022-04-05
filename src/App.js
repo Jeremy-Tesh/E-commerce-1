@@ -6,9 +6,10 @@ import ShopPage from './Pages/ShopPage/Shop';
 import Cart from './components/Cart/Cart';
 import { Route, Routes } from 'react-router-dom';
 import CheckOut from './components/CheckOut/Checkout';
+import './App.css';
 function App() {
     return (
-        <div>
+        <div className="app-container">
             <Header />
             <Routes>
                 <Route path="/" element={<Home />} />

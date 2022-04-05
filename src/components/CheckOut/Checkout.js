@@ -24,46 +24,25 @@ function CheckOut() {
             />
             <Wrapper>
                 <Form>
-                    <div
-                        style={{
-                            width: '100%',
-                            display: 'flex'
-                        }}
-                    >
+                    <div className="flex">
                         <TextField fullWidth placeholder="name" />
                         <TextField fullWidth placeholder="lastname" />
                     </div>
                     <TextField placeholder="companyname" />
                     <TextField placeholder="Country" />
                     <TextField placeholder="Street/Adress" />
-                    <div
-                        style={{
-                            width: '100%',
-                            display: 'flex'
-                        }}
-                    >
+                    <div className="flex">
                         <TextField fullWidth placeholder="name" />
                         <TextField fullWidth placeholder="lastname" />
                     </div>
-                    <div
-                        style={{
-                            width: '100%',
-                            display: 'flex'
-                        }}
-                    >
+                    <div className="flex">
                         <TextField fullWidth placeholder="name" />
                         <TextField fullWidth placeholder="lastname" />
                     </div>
                 </Form>
                 <CheckOutCard>
                     <CartTitle>Your Order</CartTitle>
-                    <div
-                        style={{
-                            display: 'flex',
-                            justifyContent: 'space-between',
-                            padding: '20px 20px'
-                        }}
-                    >
+                    <div className="flex justify-between py-2 ">
                         <Typography>Product</Typography>
                         <Typography>Total</Typography>
                     </div>
