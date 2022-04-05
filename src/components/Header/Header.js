@@ -29,9 +29,7 @@ function Header() {
         } else setNavColor(false);
     };
 
-    // useEffect(() => {
-    //     return window.removeEventListener('scroll', changeColor);
-    // }, []);
+    
     usePageViews();
 
     return (

@@ -14,6 +14,7 @@ export const Container = styled.div`
 `;
 export const Navs = styled(Typography)`
     display: flex;
+    position: relative;
     align-items: center;
     font-weight: 200;
     cursor: pointer;
@@ -27,6 +28,7 @@ export const NavContainer = styled.div`
     display: flex;
     flex: 1.5;
     align-items: center;
+    position: relative;
 `;
 export const Logo = styled.div`
     display: flex;
@@ -41,3 +43,12 @@ export const SearchContainer = styled.div`
     justify-content: space-around;
     align-items: center;
 `;
+// export const HoverBox = styled.div`
+//     height: 400px;
+//     width: 200px;
+//     border: 1px solid white;
+//     position: absolute;
+//     margin-top: 450px;
+//     margin-left: 180px;
+//     opacity: 1;
+// `;
