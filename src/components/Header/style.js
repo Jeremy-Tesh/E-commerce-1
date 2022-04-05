@@ -34,11 +34,13 @@ export const Logo = styled.div`
     display: flex;
     flex: 0.5;
     margin-left: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 `;
 export const SearchContainer = styled.div`
     display: flex;
     flex: 1;
-
     color: white;
     justify-content: space-around;
     align-items: center;
@@ -52,3 +54,11 @@ export const SearchContainer = styled.div`
 //     margin-left: 180px;
 //     opacity: 1;
 // `;
+export const LogoImg = styled.div`
+    background-image: url('https://d-themes.com/angular/molla/demo5/assets/images/logo.png');
+    height: 150px;
+    width: 150px;
+    margin-top: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+`;
