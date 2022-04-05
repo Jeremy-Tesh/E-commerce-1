@@ -64,6 +64,7 @@ function Section5() {
                         <br></br>
                         <p>$19.99-$48.00</p>
                     </div>
+                    <div className="divide-y divide-blue-200"></div>
                 </div>
             </div>
         </>

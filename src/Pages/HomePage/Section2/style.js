@@ -14,6 +14,7 @@ export const Card1 = styled.div`
     background-image: url(${banner1});
 
     display: flex;
+
     justify-content: center;
     align-items: center;
     height: 60vh;
